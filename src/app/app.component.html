@@ -1,0 +1,11 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <button (click)="condition = !condition">Show title UNLESS condition is TRUE</button>
+  <h3>I am...</h3>
+  <h2>{{condition}}</h2>
+
+  <h1 *appUnless="condition">
+    {{ title }}
+  </h1>
+</div>
+
