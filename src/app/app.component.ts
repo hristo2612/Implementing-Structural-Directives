@@ -6,6 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Implementing Directives';
-  condition: boolean = true;
+  clicked: string = 'ng-if';
 }

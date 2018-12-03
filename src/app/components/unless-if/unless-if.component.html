@@ -1,0 +1,11 @@
+<div>
+  <button mat-raised-button color="warn" (click)="condition = !condition">
+    Show Title UNLESS TRUE
+  </button>
+  <h3>Condition is</h3>
+  <h2>{{ condition }}</h2>
+  <h1 *appUnless="condition">I AM THE BEST TITLE</h1>
+
+  <!-- USE APP-UNLESS DIRECTIVE -->
+  <h1 *appUnless="condition">{{ title }}</h1>
+</div>

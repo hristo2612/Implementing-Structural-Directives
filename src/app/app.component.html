@@ -1,11 +1,19 @@
-<!--The content below is only a placeholder and can be replaced.-->
+<!-- The content below is only a placeholder and can be replaced. -->
 <div style="text-align:center">
-  <button (click)="condition = !condition">Show title UNLESS condition is TRUE</button>
-  <h3>I am...</h3>
-  <h2>{{condition}}</h2>
+  <!-- BUTTONS FOR SHOWING CURRENT VIEW -->
+  <button mat-raised-button color="accent" (click)="clicked = 'unless-if'">unless-if</button>
+  <button mat-raised-button color="primary" (click)="clicked = 'ng-if'">ng-if</button>
+  <button mat-raised-button color="accent" (click)="clicked = 'ng-if-else'">ng-if-else</button>
+  <button mat-raised-button color="primary" (click)="clicked = 'ng-if-then-else'">
+    ng-if-then-else
+  </button>
+  <button mat-raised-button color="accent" (click)="clicked = 'ng-if-as'">ng-if-as</button>
 
-  <h1 *appUnless="condition">
-    {{ title }}
-  </h1>
+  <div class="container" [ngSwitch]="clicked">
+    <app-if-simple *ngSwitchCase="'ng-if'"></app-if-simple>
+    <app-if-else *ngSwitchCase="'ng-if-else'"></app-if-else>
+    <app-if-then-else *ngSwitchCase="'ng-if-then-else'"></app-if-then-else>
+    <app-if-as *ngSwitchCase="'ng-if-as'"></app-if-as>
+    <app-unless-if *ngSwitchCase="'unless-if'"></app-unless-if>
+  </div>
 </div>
-
